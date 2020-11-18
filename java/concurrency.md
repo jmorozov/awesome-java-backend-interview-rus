@@ -2,11 +2,22 @@
 
 # Java Concurrency
 
+- [Расскажите про методы `wait`, `notify`, `notifyAll` и ключевое слово `synchronized`](#расскажите-про-методы-wait-notify-notifyall-и-ключевое-слово-synchronized)
+- [JMM. Зачем нужно volatile. Популярный вопрос](#jmm-зачем-нужно-volatile-популярный-вопрос)
+- [Что такое Executor и ExecutorService, Thread pool и зачем нужны?](#что-такое-executor-и-executorservice-thread-pool-и-зачем-нужны)
+- [Что внутри параллельных стримов? На каком пуле работают параллельные стримы и в чем его особенность?](#что-внутри-параллельных-стримов-на-каком-пуле-работают-параллельные-стримы-и-в-чем-его-особенность)
+- [Как работает ConcurrentHashMap?](#как-работает-concurrenthashmap)
+- [Как работают Атомики?](#как-работают-атомики)
+- [Что такое ThreadLocal переменные?](#что-такое-threadlocal-переменные)
+- [Чем поток отличается от процесса?](#чем-поток-отличается-от-процесса)
+
 ## Расскажите про методы `wait`, `notify`, `notifyAll` и ключевое слово `synchronized`
 
 В принципе, статьи на [Baeldung](https://www.baeldung.com/java-wait-notify) должно хватить. Лучше, конечно, пописать код с использованием `wait`, `notify`, `notifyAll` и `synchronized` руками. Также можно почитать [официальный туториал](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html) от Oracle по Concurrency в Java.
 
 Но если хотите пойти глубже, то хаброписатели опять спешат на помощь - [тут](https://habr.com/ru/post/143237/). А также Java Language Specification, [раздел 17.1 и 17.2](https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html).
+
+[к содержанию](#java-concurrency)
 
 ## JMM. Зачем нужно volatile. Популярный вопрос
 
@@ -21,6 +32,8 @@
 Также ответ на этот вопрос можно [прочитать](https://itsobes.ru/JavaSobes/chto-delaet-volatile/) на itsobes.ru.
 А ещё можно ознакомиться с вопросом на JVM-уровне в статье [How ‘volatile’ works on JVM level?](https://medium.com/@dredwardhyde/how-volatile-works-on-jvm-level-7a250d38435d) на Medium.
 
+[к содержанию](#java-concurrency)
+
 ## Что такое Executor и ExecutorService, Thread pool и зачем нужны?
 
 Создавать и убивать потоки - дорого. Давайте создадим N потоков (Thread pool) и будем их переиспользовать. А давайте. Вот [тут](https://www.ibm.com/developerworks/ru/library/j-jtp0730/index.html) описано развёрнуто.
@@ -31,6 +44,8 @@
 - [Cтатью](https://habr.com/ru/post/326146/) на Хабре
 - На Baeldung: [раз](https://www.baeldung.com/java-executor-service-tutorial) и [два](https://www.baeldung.com/thread-pool-java-and-guava)
 - Официальный [туториал](https://docs.oracle.com/javase/tutorial/essential/concurrency/executors.html) от Oracle
+
+[к содержанию](#java-concurrency)
 
 ## Что внутри параллельных стримов? На каком пуле работают параллельные стримы и в чем его особенность?
 
@@ -48,6 +63,8 @@
 - С примерами и картинками - [Java Parallel Stream](https://java2blog.com/java-8-parallel-stream/)
 - С графиками в [How does the Fork/Join framework act under different configurations?](https://blog.overops.com/forkjoin-framework-vs-parallel-streams-vs-executorservice-the-ultimate-benchmark/)
 - [Как работают параллельные стримы?](https://itsobes.ru/JavaSobes/kak-rabotaiut-parallelnye-strimy/)
+
+[к содержанию](#java-concurrency)
 
 ## Как работает ConcurrentHashMap?
 [ConcurrentHashMap](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html) - это потокобезопасная мапа (карта, словарь, ассоциативный массив, но тут и далее просто "мапа"), у которой отсутствуют блокировки на всю мапу целиком.
@@ -74,6 +91,8 @@
         initialCapacity = concurrencyLevel;   // as estimated threads
 ```
 Есть более современная [статья](https://habr.com/ru/post/327186/) с примером реализации ConcurrentMap. Также можно почитать [гайд](https://www.baeldung.com/java-concurrent-map) по ConcurrentMap на Baeldung.
+
+[к содержанию](#java-concurrency)
 
 ## Как работают Атомики?
 
@@ -138,6 +157,8 @@
 - [Алексей Шипилёв — Если не Unsafe, то кто: восход VarHandles](https://www.youtube.com/watch?v=ESs0bZw8hsA)
 - [Introduction to nonblocking algorithms](https://www.ibm.com/developerworks/java/library/j-jtp04186/index.html)
 
+[к содержанию](#java-concurrency)
+
 ## Что такое ThreadLocal переменные?
 
 [ThreadLocal](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/ThreadLocal.html) - класс в виде обёртки для хранения отдельной независимой копии значения переменной для каждого использующего её потока, что позволяет сделать работу с такой переменной потокобезопасной.
@@ -159,9 +180,13 @@
 - [5 вещей, которых вы не знали о многопоточности](https://habr.com/ru/post/108016/) на Хабре
 - [Разбор основных концепций параллелизма](https://habr.com/ru/company/otus/blog/353414/) на Хабре
 
+[к содержанию](#java-concurrency)
+
 ## Чем поток отличается от процесса?
 
 Ответ на этот вопрос писали в интернете ещё тогда, когда я балду в школе пинал (нулевые), поэтому у читателя есть широкий выбор.
 Мне импонирует [заметка](https://www.opennet.ru/docs/RUS/linux_parallel/node42.html) на OpenNET - кратко и чётко, суше Сахары.
 Для любителей смотреть в окна есть [статейка](https://docs.microsoft.com/ru-ru/windows/win32/procthread/about-processes-and-threads?redirectedfrom=MSDN) на MSDN.
 Вишенка на торте - олдовая [статья](https://habr.com/ru/post/40227/) с Хабра.
+
+[к содержанию](#java-concurrency)

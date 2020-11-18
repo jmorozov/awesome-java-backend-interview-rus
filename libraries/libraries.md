@@ -2,6 +2,8 @@
 
 # Популярные библиотеки
 
+- [Стоит ли использовать Lombok?](#стоит-ли-использовать-lombok)
+
 ## Стоит ли использовать Lombok?
 
 Осторожно, холиворный вопрос! Возможны ожоги и прочие неприятности!
@@ -31,3 +33,5 @@ P.S. У Lombok есть занятная экспериментальная фи
 - [Error handling with @Transactional and @SneakyThrows](https://blog.pchudzik.com/201911/transactional-errors/)
 - [Lombok, sources.jar и удобный дебаг](https://habr.com/ru/company/sberbank/blog/438548/)
 - [Some Dangers of Using Lombok](https://medium.com/@gabor.liptak/some-dangers-of-using-lombok-d759fc8f701f)
+
+[к содержанию](#популярные-библиотеки)

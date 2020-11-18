@@ -2,6 +2,12 @@
 
 # Java Core
 
+- [Какие бывают операции в стримах? Напишите стрим?](#какие-бывают-операции-в-стримах-напишите-стрим)
+- [Что поменялось с Java 8 по Java <CURRENT_VERSION>?](#что-поменялось-с-java-8-по-java-current_version)
+- [В какой кодировке строки в Java? Как хранятся строки внутри класса String? Как устроен String?](#в-какой-кодировке-строки-в-java-как-хранятся-строки-внутри-класса-string-как-устроен-string)
+- [Сколько в байт занимает каждый из примитивных типов в памяти? А объект?](#сколько-в-байт-занимает-каждый-из-примитивных-типов-в-памяти-а-объект)
+- [Какие ссылки бывают в Java?](#какие-ссылки-бывают-в-java)
+
 ## Какие бывают операции в стримах? Напишите стрим?
 
 Есть 2 вида операций в Java [`Stream`](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/stream/Stream.html):
@@ -27,6 +33,8 @@
 - На letsCode - [Java Stream API: функционально, модно, молодёжно!](https://www.youtube.com/watch?v=RzEiCguFZiY)
 - Лекция в CSCenter от Тагира Валеева - [Лекция 8. Stream API](https://www.youtube.com/watch?v=Pk7atYm8bX0)
 - Доклад Тагира Валеева на Joker 2016 - [Причуды Stream API](https://www.youtube.com/watch?v=1_Zj3gS_a3E)
+
+[к содержанию](#java-core)
 
 ## Что поменялось с Java 8 по Java <CURRENT_VERSION>?
 
@@ -130,6 +138,8 @@ Java имеет [богатую историю](https://en.wikipedia.org/wiki/Ja
 - [Dalia Abo Sheasha — Migrating beyond Java 8](https://www.youtube.com/watch?v=NeYYmIup5nY)
 - [Project Loom: Helping Write Concurrent Applications on the Java Platform by Ron Pressler](https://www.youtube.com/watch?v=lIq-x_iI-kc)
 
+[к содержанию](#java-core)
+
 ## В какой кодировке строки в Java? Как хранятся строки внутри класса String? Как устроен String?
 
 До Java 9 все строки имели кодировку `UTF-16` (2 байта на символ) и хранились в массиве `char`.
@@ -159,6 +169,8 @@ Java имеет [богатую историю](https://en.wikipedia.org/wiki/Ja
 - [Владимир Иванов — Глубокое погружение в invokedynamic](https://www.youtube.com/watch?v=DgshYDTpS9I)
 - [Charles Nutter — Let's Talk About Invokedynamic](https://www.youtube.com/watch?v=0vfFHMGESVQ)
 - [Что там с JEP-303 или изобретаем invokedynamic](https://habr.com/ru/post/328240/)
+
+[к содержанию](#java-core)
 
 ## Сколько в байт занимает каждый из примитивных типов в памяти? А объект?
   
@@ -195,6 +207,8 @@ Java имеет [богатую историю](https://en.wikipedia.org/wiki/Ja
 - [objArrayOop.hpp](https://github.com/openjdk/jdk/blob/master/src/hotspot/share/oops/objArrayOop.hpp)
 - [oopFactory.hpp](https://github.com/openjdk/jdk/blob/master/src/hotspot/share/memory/oopFactory.hpp)
 
+[к содержанию](#java-core)
+
 ## Какие ссылки бывают в Java?
 
 Типы ссылок в Java:
@@ -211,3 +225,5 @@ Java имеет [богатую историю](https://en.wikipedia.org/wiki/Ja
 Подробнее:
 - [Мягкие ссылки на страже доступной памяти или как экономить память правильно](https://habr.com/ru/post/169883/) на Хабре
 - [Использование PhantomReferences в Java](http://samolisov.blogspot.com/2011/09/phantomreferences-java.html)
+
+[к содержанию](#java-core)

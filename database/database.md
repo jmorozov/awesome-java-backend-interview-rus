@@ -14,6 +14,8 @@
 - *I* - Изолированность (Isolation). Во время выполнения транзакции параллельные транзакции не должны оказывать влияния на её результат.
 - *D* - Стойкость (Durability). Подтверждённые изменения не будут отменены (например, из-за сбоя).
 
+[к содержанию](#database)
+
 ## Уровни изолированности транзакции. Какую проблему решает каждый уровень? Какой по умолчанию в большинстве реляционных БД? Приходилось ли изменять уровень изолированности транзакции и для чего?
 
 Краткий конспект [статьи](https://ru.wikipedia.org/wiki/%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C_%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D1%82%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B9) из Википедии:
@@ -28,6 +30,8 @@
 - [Для PostgreSQL](https://habr.com/ru/post/317884/). Тут вообще стоит упомянуть для любителей углубиться в тему статьи из блога [Postgres Professional](https://habr.com/ru/company/postgrespro/), и в частности цикл статей @egorov по внутреннему устройству PostgreSQL (например, [раз](https://habr.com/ru/company/postgrespro/blog/442804/), [два](https://habr.com/ru/company/postgrespro/blog/462877/) и т.д.). А также на сайте Postgres Professional есть документация на русском языке и [страница](https://postgrespro.ru/docs/postgresql/12/transaction-iso) по данному вопросу.
 - Для MySQL: [раз](https://habr.com/ru/post/135217/), [два](https://habr.com/ru/post/238513/)
 - [Транзакции и механизмы их контроля](https://habr.com/ru/post/446662/)
+
+[к содержанию](#database)
 
 ## Какие бывают типы индексов в БД и как они устроены под капотом? Что такое индекс вообще?
 
@@ -75,6 +79,8 @@
 - [SQL Server Indexes Interview Questions and Answers](https://dotnettutorials.net/lesson/sql-server-indexes-interview-questions-answers/)
 - [Top 25 SQL interview questions and answers about indexes](https://www.sqlshack.com/top-25-sql-interview-questions-and-answers-about-indexes/)
 - [An in-depth look at Database Indexin](https://www.freecodecamp.org/news/database-indexing-at-a-glance-bb50809d48bd/)
+
+[к содержанию](#database)
 
 ## В чем разница между оптимистической и пессимистической блокировками?
 
@@ -124,3 +130,5 @@
 - [Optimistic locking](https://www.jooq.org/doc/latest/manual/sql-execution/crud-with-updatablerecords/optimistic-locking/) в документации JOOQ
 - [Optimistically Locking Your Spring Boot Web Services](https://medium.com/slalom-build/optimistically-locking-your-spring-boot-web-services-187662eb8a91)
 - [Optimistic and pessimistic locking with SQL](https://convincedcoder.com/2018/09/01/Optimistic-pessimistic-locking-sql/)
+
+[к содержанию](#database)

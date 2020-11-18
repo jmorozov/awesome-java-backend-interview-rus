@@ -2,6 +2,16 @@
 
 # Принципы, паттерны, практики и подходы разработки ПО
 
+- [SOLID.](#solid)
+- [Паттерны. Какие знаете? Каких видов бывают? Расскажите парочку (желательно разных видов)? Какие применяли на практике или встречались где-то? Чем декоратор отличается от прокси, а абстрактная фабрика от обычной?](#паттерны-какие-знаете-каких-видов-бывают-расскажите-парочку-желательно-разных-видов-какие-применяли-на-практике-или-встречались-где-то-чем-декоратор-отличается-от-прокси-а-абстрактная-фабрика-от-обычной)
+- [Что такое coupling и cohesion? Что из них (или оба) должно быть сильным (высоким) и/или слабым (низким)?](#что-такое-coupling-и-cohesion-что-из-них-или-оба-должно-быть-сильным-высоким-иили-слабым-низким)
+- [Что такое куб масштабирования?](#что-такое-куб-масштабирования)
+- [Расскажите о CAP-теореме. Как MongoDB (например) удовлетворяет CAP-теореме?](#расскажите-о-cap-теореме-как-mongodb-например-удовлетворяет-cap-теореме)
+- [Чем композиция отличается от агрегации?](#чем-композиция-отличается-от-агрегации)
+- [Какие бывают тестовые объекты (заглушки)? Чем стаб отличается от мока?](#какие-бывают-тестовые-объекты-заглушки-чем-стаб-отличается-от-мока)
+- [Дайте определение полиморфизму](#дайте-определение-полиморфизму)
+- [Что такое REST? Какое API является RESTful? Чем REST отличается от SOAP?](#что-такое-rest-какое-api-является-restful-чем-rest-отличается-от-soap)
+
 ## SOLID. 
 
 Обычно просто просят расшифровать, что каждая буква означает с минимальным пояснением. Никто из моих интервьюеров не стал размусоливать или обсуждать. Один раз спросили, зачем оно вообще надо. Но, я думаю, чем больше сеньорности в вакансии, тем глубже и интереснее дискуссия может возникнуть.
@@ -18,9 +28,13 @@
 
 Также, могу посоветовать, самостоятельно разобрать каждый принцип на практическом примере, ибо за это тоже могут спросить. Или заглянуть на [Baeldung](https://www.baeldung.com/solid-principles).
 
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
+
 ## Паттерны. Какие знаете? Каких видов бывают? Расскажите парочку (желательно разных видов)? Какие применяли на практике или встречались где-то? Чем декоратор отличается от прокси, а абстрактная фабрика от обычной?
 
 Обычно советуют и в вакансиях пишут про [книжку GoF](https://www.ozon.ru/context/detail/id/2457392/). Но, на мой взгляд, сейчас есть вариант даже лучше - [refactoring.guru](https://refactoring.guru/ru/design-patterns). Там и сравнение, и на родной мове (русский, украинский, английский, китайский), и примеры на вашем любимом ЯП, прекрасные иллюстрации и диаграммы. Там также можно купить книжку по паттернам. Автору большой-большой респект.
+
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
 
 ## Что такое coupling и cohesion? Что из них (или оба) должно быть сильным (высоким) и/или слабым (низким)?
 
@@ -36,6 +50,8 @@
 - [Утрата слабой связанности](https://habr.com/ru/post/206684/)
 
 Также coupling и cohesion часто упоминаются или ведут к обсуждению [GRASP](https://ru.wikipedia.org/wiki/GRASP). Об этом можно почитать на Хабре: [раз](https://habr.com/ru/post/38323/) и [два](https://habr.com/ru/post/92570/).
+
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
 
 ## Что такое куб масштабирования?
 
@@ -56,6 +72,8 @@
 - И вот [ещё](https://www.instana.com/blog/scaling-microservices-advanced-approaches-with-the-akf-scaling-cube/).
 - А [тут](https://akfpartners.com/growth-blog/scale-cube) с картинками.
 - Также куб упоминается в книгах [Microservice Patterns and Best Practices](https://www.packtpub.com/application-development/microservice-patterns-and-best-practices) и [Microservices Patterns](https://www.manning.com/books/microservices-patterns) (есть на русском).
+
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
 
 ## Расскажите о CAP-теореме. Как MongoDB (например) удовлетворяет CAP-теореме?
 
@@ -78,6 +96,8 @@ MongoDB, по мнению большинства ([например](https://ww
 - [CAP Theorem and Distributed Database Management Systems](https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e) с картинками
 - [What is the CAP Theorem?](https://medium.com/@bikas.katwal10/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15) на богомерзком medium
 
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
+
 ## Чем композиция отличается от агрегации?
 
 Композиция (composition) - отношение "является частью" (HAS-A Relationship), при котором целое явно контролирует время жизни своей составной части.
@@ -88,6 +108,8 @@ MongoDB, по мнению большинства ([например](https://ww
 - [Наследование vs Композиция vs Агрегация](http://sergeyteplyakov.blogspot.com/2012/12/vs-vs.html#:~:text=%D0%A0%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0%20%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B5%D0%B9%20%D0%B8%20%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%86%D0%B8%D0%B5%D0%B9,%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B)
 - [Наследование, композиция, агрегация](https://habr.com/ru/post/354046/)
 - [Агрегация и композиция](https://ru.stackoverflow.com/questions/596697/%D0%90%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F)
+
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
 
 ## Какие бывают тестовые объекты (заглушки)? Чем стаб отличается от мока?
 
@@ -115,6 +137,8 @@ MongoDB, по мнению большинства ([например](https://ww
 - [Mockito Mock vs. Spy in Spring Boot Tests](https://dzone.com/articles/mockito-mock-vs-spy-in-spring-boot-tests)
 - [Tag: Mockito](https://www.baeldung.com/tag/mockito/) на Bealdung
 
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
+
 ## Дайте определение полиморфизму
 
 В общем виде определение [полиморфизма](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)) приводит Бенджамин Пирс в своей книге [Типы в языках программирования](https://medium.com/devschacht/polymorphism-207d9f9cd78):
@@ -136,6 +160,8 @@ MongoDB, по мнению большинства ([например](https://ww
 - [Неформальное введение в теорию типов](https://www.youtube.com/watch?v=RzzhKTiDSWQ)
 - Несколько глав из Java Virtual Machine Specification: [Invoking Methods](https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-3.html#jvms-3.7), [invokevirtual](https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-6.html#jvms-6.5.invokevirtual), [Linking](https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-5.html#jvms-5.4)
 - Несколько глав из Java Language Specification: [Inheritance, Overriding, and Hiding](https://docs.oracle.com/javase/specs/jls/se14/html/jls-8.html#jls-8.4.8), [Conversions and Contexts](https://docs.oracle.com/javase/specs/jls/se14/html/jls-5.html), [Type Inference](https://docs.oracle.com/javase/specs/jls/se14/html/jls-18.html)
+
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)
 
 ## Что такое REST? Какое API является RESTful? Чем REST отличается от SOAP?
 
@@ -206,3 +232,5 @@ MongoDB, по мнению большинства ([например](https://ww
 - [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 - [Создание SOAP Web-сервиса](https://spring-projects.ru/guides/producing-web-service/)
 - [Спецификация SOAP](https://www.w3.org/TR/soap/)
+
+[к содержанию](#принципы-паттерны-практики-и-подходы-разработки-по)

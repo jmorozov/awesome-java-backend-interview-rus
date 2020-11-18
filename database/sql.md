@@ -2,6 +2,8 @@
 
 # SQL
 
+- [В чем разница между where и having в SQL?](#в-чем-разница-между-where-и-having-в-sql)
+
 ## В чем разница между where и having в SQL?
 
 Есть исчерпывающий [ответ](https://www.postgresql.org/docs/12/tutorial-agg.html) на этот вопрос в документации к Postgresql. Вот его перевод с сайта [Postgres Pro](https://postgrespro.ru/docs/postgresql/12/tutorial-agg):
@@ -15,3 +17,5 @@
 - [Курс](https://www.youtube.com/playlist?list=PL-_cKNuVAYAWMRG7iKHGZMg9Az8HX735w) по БД от Ильи Тетерина или [курс](https://www.youtube.com/playlist?list=PL-_cKNuVAYAU-CO9NXtjzqdUsXoK047DZ) от Вадима Цесько
 - [Let's Build a Simple Database](https://cstack.github.io/db_tutorial/)
 - [Database internals](https://www.databass.dev/)
+
+[к содержанию](#sql)

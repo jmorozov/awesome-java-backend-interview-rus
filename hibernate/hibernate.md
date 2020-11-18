@@ -2,6 +2,12 @@
 
 # Hibernate
 
+- [Какие есть кэши в Hibernate и какие работают по умолчанию?](#какие-есть-кэши-в-hibernate-и-какие-работают-по-умолчанию)
+- [Чем отличается Lazy от Eager в Hibernate?](#чем-отличается-lazy-от-eager-в-hibernate)
+- [Что такое "проблема N+1 запроса" при использовании Hibernate? Когда возникает? Как решить? Как обнаружить?](#что-такое-проблема-n1-запроса-при-использовании-hibernate-когда-возникает-как-решить-как-обнаружить)
+- [Как описать составной ключ при использовании Hibernate?](#как-описать-составной-ключ-при-использовании-hibernate)
+- [Как можно отобразить наследование на БД с помощью JPA (Hibernate)?](#как-можно-отобразить-наследование-на-бд-с-помощью-jpa-hibernate)
+
 ## Какие есть кэши в Hibernate и какие работают по умолчанию?
 
 3 уровня кеширования:
@@ -25,6 +31,8 @@
 - [How does Hibernate READ_ONLY CacheConcurrencyStrategy work](https://vladmihalcea.com/how-does-hibernate-read_only-cacheconcurrencystrategy-work/)
 - [How does Hibernate READ_WRITE CacheConcurrencyStrategy work](https://vladmihalcea.com/how-does-hibernate-read_write-cacheconcurrencystrategy-work/)
 
+[к содержанию](#hibernate)
+
 ## Чем отличается Lazy от Eager в Hibernate?
 
 - [Eager Loading](https://docs.oracle.com/javaee/7/api/javax/persistence/FetchType.html#EAGER) - стратегия загрузки, при которой подгрузка связанных сущностей происходит сразу. Для применения необходимо в аннотацию отношения (`@OneToOne`, `@ManyToOne`, `@OneToMany`, `@ManyToMany`) передать `fetch = FetchType.EAGER`. Используется по умолчанию для отношений `@OneToOne` и `@ManyToOne`.
@@ -33,6 +41,8 @@
 Вопрос также связан с проблемой "N+1" и может плавно перетечь в её обсуждение.
 
 Почитать подробнее и с примерами можно в блоге Vlad Mihalcea: [раз](https://vladmihalcea.com/hibernate-facts-the-importance-of-fetch-strategy/), [два](https://vladmihalcea.com/eager-fetching-is-a-code-smell/) и про LazyInitializationException [три](https://vladmihalcea.com/the-best-way-to-handle-the-lazyinitializationexception/).
+
+[к содержанию](#hibernate)
 
 ## Что такое "проблема N+1 запроса" при использовании Hibernate? Когда возникает? Как решить? Как обнаружить?
 
@@ -66,6 +76,8 @@
 - На DOU про стратегии загрузки коллекций в [JPA](https://dou.ua/lenta/articles/jpa-fetch-types/) и [Hibernate](https://dou.ua/lenta/articles/hibernate-fetch-types/)
 - В видео формате в докладе Николая Алименкова на JPoint ["Сделаем Hibernate снова быстрым"](https://youtu.be/b52Qz6qlic0?t=1224)
 
+[к содержанию](#hibernate)
+
 ## Как описать составной ключ при использовании Hibernate?
 
 На всякий случай: `составной ключ` - первичный ключ, состоящий из двух и более атрибутов. Вообще про ключи есть большая [статья](https://habr.com/ru/company/oleg-bunin/blog/348172/) на Хабре с ценными комментариями.
@@ -75,6 +87,8 @@
 В самой же сущности, для которой мы описываем составной ключ, добавляем поле только что созданного класса ключа и вешаем на него аннотацию `@EmbeddedId`.
 
 Посмотреть примеры и углубиться в тему можно в [статье](https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-and-hibernate/) Vlad Mihalcea или в [документации](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#identifiers-composite-aggregated) Hibernate.
+
+[к содержанию](#hibernate)
 
 ## Как можно отобразить наследование на БД с помощью JPA (Hibernate)?
 
@@ -93,3 +107,5 @@
 - [Hibernate](https://docs.jboss.org/hibernate/orm/5.4/javadocs/org/hibernate/annotations/package-summary.html)
 
 Или почитать спецификацию [JPA](https://download.oracle.com/otn-pub/jcp/persistence-2_2-mrel-spec/JavaPersistence.pdf) 2.2. Ещё есть [книжка](https://www.amazon.com/Understanding-JPA-2-2-Persistence-fascicle-ebook/dp/B07RWPXPS6) с толкованием данного pdf.
+
+[к содержанию](#hibernate)

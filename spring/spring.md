@@ -2,6 +2,14 @@
 
 # Spring
 
+- [Какие есть `scope` в Spring? Какой по умолчанию? Чем `singleton` отличается от `prototype`? Можно ли сделать свой `scope` и как? Плавно переходит в вопрос "Как заинжектить `prototype` в `singleton`?"](#какие-есть-scope-в-spring-какой-по-умолчанию-чем-singleton-отличается-от-prototype-можно-ли-сделать-свой-scope-и-как-плавно-переходит-в-вопрос-как-заинжектить-prototype-в-singleton)
+- [Часто спрашивают о циклических зависимостях бинов в Spring. Проблема ли это или что получим в результате? Если проблема, то как её решить?](#часто-спрашивают-о-циклических-зависимостях-бинов-в-spring-проблема-ли-это-или-что-получим-в-результате-если-проблема-то-как-её-решить)
+- [Бывают вопросы про жизненный цикл бина, этапы инициализации контекста, про устройство спринга внутри, про DI и как он работает](#бывают-вопросы-про-жизненный-цикл-бина-этапы-инициализации-контекста-про-устройство-спринга-внутри-про-di-и-как-он-работает)
+- [Расскажите про прокси и про `@Transactional`. Как работает и зачем? Какие могут быть проблемы? Можно ли навесить `@Transactional` на приватный метод? А если вызывать метод с `@Transactional` внутри другого метода с `@Transactional` одного класса - будет работать?](#расскажите-про-прокси-и-про-transactional-как-работает-и-зачем-какие-могут-быть-проблемы-можно-ли-навесить-transactional-на-приватный-метод-а-если-вызывать-метод-с-transactional-внутри-другого-метода-с-transactional-одного-класса---будет-работать)
+- [Где у обычного (НЕ Boot) Spring-приложения main-класс?](#где-у-обычного-не-boot-spring-приложения-main-класс)
+- [Как работает Spring Boot и его стартеры?](#как-работает-spring-boot-и-его-стартеры)
+- [Как выполняется http-запрос в Spring?](#как-выполняется-http-запрос-в-spring)
+
 ## Какие есть `scope` в Spring? Какой по умолчанию? Чем `singleton` отличается от `prototype`? Можно ли сделать свой `scope` и как? Плавно переходит в вопрос "Как заинжектить `prototype` в `singleton`?"
 
 Spring scope:
@@ -21,6 +29,8 @@ Spring scope:
 
 Подробнее о каждом варианте есть в [Bealdung](https://www.baeldung.com/spring-inject-prototype-bean-into-singleton) и смотрим [Spring-потрошитель Ч. 2](https://www.youtube.com/watch?v=cou_qomYLNU&t=2s).
 
+[к содержанию](#spring)
+
 ## Часто спрашивают о циклических зависимостях бинов в Spring. Проблема ли это или что получим в результате? Если проблема, то как её решить?
 
 Да, это проблема - будет выброшено исключение `BeanCurrentlyInCreationException` (при внедрении зависимостей через конструктор).
@@ -32,11 +42,15 @@ Spring scope:
 
 Подробнее есть в [документации](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-dependency-resolution) и в [Bealdung](https://www.baeldung.com/circular-dependencies-in-spring)
 
+[к содержанию](#spring)
+
 ## Бывают вопросы про жизненный цикл бина, этапы инициализации контекста, про устройство спринга внутри, про DI и как он работает
 
 Тут однозначно надо смотреть Spring-потрошитель [часть 1](https://www.youtube.com/watch?v=BmBr5diz8WA) и [часть 2](https://www.youtube.com/watch?v=cou_qomYLNU&t=2s). Также благое дело - это почитать [документацию](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#spring-core).
 
 Также по этапам инициализации контекста есть [статья](https://habr.com/ru/post/222579/) с красивыми картинками на хабре.
+
+[к содержанию](#spring)
 
 ## Расскажите про прокси и про `@Transactional`. Как работает и зачем? Какие могут быть проблемы? Можно ли навесить `@Transactional` на приватный метод? А если вызывать метод с `@Transactional` внутри другого метода с `@Transactional` одного класса - будет работать?
 
@@ -46,6 +60,8 @@ Spring scope:
 
 Что тут можно ещё посоветовать? Spring-потрошитель опять и снова - [часть 1](https://www.youtube.com/watch?v=BmBr5diz8WA) и [часть 2](https://www.youtube.com/watch?v=cou_qomYLNU&t=2s). А также документация является несомненным и любимым первоисточником информации о [Proxy](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop-proxying) и [управление транзакциями](https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html).
 
+[к содержанию](#spring)
+
 ## Где у обычного (НЕ Boot) Spring-приложения main-класс?
 
 Старое доброе обычное Spring-приложение деплоится в [контейнер сервлетов](https://en.wikipedia.org/wiki/Web_container) (или [сервер приложений](https://en.wikipedia.org/wiki/List_of_application_servers#Java)), где и расположен main-класс. При этом оно собирается в [war-архив](https://en.wikipedia.org/wiki/WAR_(file_format)). Когда war-файл разворачивается в контейнере, контейнер обычно распаковывает его для доступа к файлам, а затем запускает приложение. Spring Boot приложение также можно собрать как war и задеплоить его таким же образом.
@@ -54,6 +70,8 @@ Spring scope:
 - [Понимание WAR](http://spring-projects.ru/understanding/war/)
 - [В чём разница между jar и war?](https://itsobes.ru/JavaSobes/v-chiom-raznitsa-mezhdu-jar-i-war/)
 - Конвертация Spring Boot JAR приложения в WAR на [RUS](https://spring-projects.ru/guides/convert-jar-to-war-maven/) или [ENG](https://spring.io/guides/gs/convert-jar-to-war/)
+
+[к содержанию](#spring)
 
 ## Как работает Spring Boot и его стартеры?
 
@@ -97,6 +115,8 @@ public class MyApplication {
 - [Spring Boot for beginners](https://github.com/in28minutes/SpringBootForBeginners)
 - [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-documentation)
 - [Список](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-starters) готовых стартеров
+
+[к содержанию](#spring)
 
 ## Как выполняется http-запрос в Spring?
 
@@ -185,3 +205,5 @@ Spring WebFlux - это реактивный веб-фреймворк, кото
 Документация:
 - [Spring WebFlux](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#webflux)
 - [Spring WebFlux Auto-configuration в Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-webflux-auto-configuration)
+
+[к содержанию](#spring)

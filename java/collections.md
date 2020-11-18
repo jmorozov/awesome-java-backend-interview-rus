@@ -2,6 +2,12 @@
 
 # Collection Framework
 
+- [Вопросы про методы `Equals`, `hashcode` и их связь с `HashMap`.](#вопросы-про-методы-equals-hashcode-и-их-связь-с-hashmap)
+- [Вопросы про списки: какие есть, алгоритмическая сложность, какой брать для вставки в середину, в конец, в огурец.](#вопросы-про-списки-какие-есть-алгоритмическая-сложность-какой-брать-для-вставки-в-середину-в-конец-в-огурец)
+- [Перечислите методы класса `Object`.](#перечислите-методы-класса-object)
+- [Что можно положить и достать из `List<? extends Number>`, а что с `List<? super Number>`? Что такое ковариантность, контрвариантность, инвариантность?](#что-можно-положить-и-достать-из-list-extends-number-а-что-с-list-super-number-что-такое-ковариантность-контрвариантность-инвариантность)
+- [Что внутри и как работают TreeSet/TreeMap? В чем идея Красно-черного дерева?](#что-внутри-и-как-работают-treesettreemap-в-чем-идея-красно-черного-дерева)
+
 ## Вопросы про методы `Equals`, `hashcode` и их связь с `HashMap`. 
 
 Контракт. Далее разговор переходит к устройству `HashMap`. Как устроена внутри? А происходит в случае возникновения коллизии? Назовите алгоритмические сложности поиска, чтения, удаления из элемента мапы. А что если ключ - это массив байтов? А может быть так, что мы положим элемент в мапу, а потом не найдем? Обсасывают бедную мапу со всех сторон. Самая популярная тема для обсуждения.
@@ -16,9 +22,13 @@
 
 Про `HashMap` и вопросы по ним есть несколько отличных статей на Хабре ([в картинках](https://habr.com/ru/post/128017/), [с дополнениями из Java 8](https://habr.com/ru/post/421179/), [а тут вопросы-ответы про коллекциям](https://habr.com/ru/post/162017/)). Кроме того, можно посмотреть исходный код в вашей любимой IDE. Можете сделать себе конспект и повесить на стену :)
 
+[к содержанию](#collection-framework)
+
 ## Вопросы про списки: какие есть, алгоритмическая сложность, какой брать для вставки в середину, в конец, в огурец.
 
 По сути это вопрос про `ArrayList` vs `LinkedList`. Опять же, заезженная пластинка, разобранная на Хабре - [вопросы-ответы про коллекциям](https://habr.com/ru/post/162017/), [ArrayList в картинках](https://habr.com/ru/post/128269/), [LinkedList в картинках](https://habr.com/ru/post/127864/), [Что «под капотом» у LinkedList](https://habr.com/ru/post/337558/). Посмотреть исходники тоже полезно. Например, можно понтануться тем, что вставка в середину в `ArrayList` выполняется с помощью нативно реализованной функции `System.arraycopy`, поэтому не всё так плохо, как могло бы быть в этом случае.
+
+[к содержанию](#collection-framework)
 
 ## Перечислите методы класса `Object`. 
 
@@ -36,6 +46,8 @@
 - wait
 
 Также можно почитать, что там вообще есть в исходниках `Object` в [статье](https://habr.com/ru/post/265373/) на Хабре.
+
+[к содержанию](#collection-framework)
 
 ## Что можно положить и достать из `List<? extends Number>`, а что с `List<? super Number>`? Что такое ковариантность, контрвариантность, инвариантность?
 
@@ -70,6 +82,8 @@
 - [Ковариантность и контравариантность](https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)) в Wikipedia
 - [Wildcards](https://docs.oracle.com/javase/tutorial/java/generics/wildcards.html) в официальном туториале Oracle
 
+[к содержанию](#collection-framework)
+
 ## Что внутри и как работают TreeSet/TreeMap? В чем идея Красно-черного дерева?
 
 [TreeMap](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/TreeMap.html) - реализация [NavigableMap](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/NavigableMap.html), основанная на [красно-чёрном дереве](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree). Элементы отсортированы по ключам в [натуральном порядке](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Comparable.html) или с помощью [Comparator](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Comparator.html), указанного при создании мапы, в зависимости от использовавшегося конструктора. Гарантирует логарифмическое время выполнения методов `containsKey`, `get`, `put` и `remove`.
@@ -97,3 +111,5 @@
 - [Балансировка красно-чёрных деревьев — Три случая](https://habr.com/ru/company/otus/blog/472040/) на Хабре
 - [Красно-чёрное дерево](https://neerc.ifmo.ru/wiki/index.php?title=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE-%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE)
 - [Визуализация](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html) красно-чёрного дерева. И [ещё](http://www.cs.armstrong.edu/liang/animation/web/RBTree.html). А вот [исходники](https://github.com/nadakamel/RedBlackTree-Visualization)
+
+[к содержанию](#collection-framework)

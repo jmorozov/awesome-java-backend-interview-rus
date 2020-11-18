@@ -2,6 +2,12 @@
 
 # Сопровождение, поддержка, эксплуатация
 
+- [Могут ли быть в Java утечки памяти и когда? Как обнаружить причину? Как снять heap-dump?](#могут-ли-быть-в-java-утечки-памяти-и-когда-как-обнаружить-причину-как-снять-heap-dump)
+- [Что такое Xmx и Xms, Xss?](#что-такое-xmx-и-xms-xss)
+- [Какие инструменты для нагрузочного тестирования вы знаете?](#какие-инструменты-для-нагрузочного-тестирования-вы-знаете)
+- [Чем докер отличается от виртуалки? Что лежит в его основе? Как работает Docker?](#чем-докер-отличается-от-виртуалки-что-лежит-в-его-основе-как-работает-docker)
+- [Чем контейнер сервлетов отличается от сервера приложений? Какие знаете?](#чем-контейнер-сервлетов-отличается-от-сервера-приложений-какие-знаете)
+
 ## Могут ли быть в Java утечки памяти и когда? Как обнаружить причину? Как снять heap-dump?
 
 Могут. Профилировать. Снимать heap-dump, например с помощью [jmap](https://docs.oracle.com/en/java/javase/14/docs/specs/man/jmap.html), загружать в memory profiler (например в [VisualVM](https://visualvm.github.io/))
@@ -23,6 +29,8 @@
 - [Different Ways to Capture Java Heap Dumps](https://www.baeldung.com/java-heap-dump-capture)
 - [Analyze memory snapshots](https://www.jetbrains.com/help/idea/analyze-hprof-memory-snapshots.html) с помощью IntelliJ IDEA
 - [Analyze objects in the JVM heap](https://www.jetbrains.com/help/idea/analyze-objects-in-the-jvm-heap.html) с помощью IntelliJ IDEA
+
+[к содержанию](#сопровождение-поддержка-эксплуатация)
 
 ## Что такое Xmx и Xms, Xss?
 
@@ -46,6 +54,8 @@ java -jar my.jar -Xms256m -Xmx2048m
 - В [статье](https://docs.oracle.com/cd/E21764_01/web.1111/e13814/jvm_tuning.htm#PERFM150) Tuning JVM от Orcale
 - В [статье](https://docs.oracle.com/en/java/javase/14/gctuning/factors-affecting-garbage-collection-performance.html) Factors Affecting Garbage Collection Performance от Oracle
 - [Список](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/jrdocs/refman/optionX.html) всех X опций CLI
+
+[к содержанию](#сопровождение-поддержка-эксплуатация)
 
 ## Какие инструменты для нагрузочного тестирования вы знаете?
 
@@ -72,6 +82,8 @@ java -jar my.jar -Xms256m -Xmx2048m
 - [Rest API Load testing with Apache JMeter](https://medium.com/@chamikakasun/rest-api-load-testing-with-apache-jmeter-a4d25ea2b7b6)
 - [Load Testing with Gatling - The Complete Guide](https://www.james-willett.com/gatling-load-testing-complete-guide/)
 - [Открытые бенчмарки для нагрузочного тестирования серверов и веб-приложений](https://habr.com/ru/company/1cloud/blog/474474/)
+
+[к содержанию](#сопровождение-поддержка-эксплуатация)
 
 ## Чем докер отличается от виртуалки? Что лежит в его основе? Как работает Docker?
 
@@ -148,6 +160,8 @@ Docker-контейнеры используются различными сис
 - [What Is Docker & Docker Container? A Deep Dive Into Docker!](https://www.edureka.co/blog/what-is-docker-container)
 - [Docker for beginners](https://docker-curriculum.com/)
 
+[к содержанию](#сопровождение-поддержка-эксплуатация)
+
 ## Чем контейнер сервлетов отличается от сервера приложений? Какие знаете?
 
 [Контейнер сервлетов](https://en.wikipedia.org/wiki/Web_container) - это компонент веб-сервера для взаимодействия с [Java-сервлетами](https://en.wikipedia.org/wiki/Java_servlet) - обеспечивает их жизненный цикл, сопоставление URL-адреса к определённому сервлету и имеет ли отправитель запроса по данному URL необходимые права доступа и т.п.
@@ -167,3 +181,5 @@ Docker-контейнеры используются различными сис
 - [Сводная таблица](https://en.wikipedia.org/wiki/List_of_application_servers)
 
 Исчерпывающий ответ на вопрос "Зачем нужны сервера приложений, если есть Tomcat" можно найти в одноимённой [статье](https://itsobes.ru/JavaSobes/chem-otlichaetsia-servlet-container-ot-application-server/).
+
+[к содержанию](#сопровождение-поддержка-эксплуатация)
